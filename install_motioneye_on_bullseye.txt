@@ -1,0 +1,35 @@
+Attempt to install on bullseye, but failed.
+https://github.com/motioneye-project/motioneye/wiki/Install-on-Raspbian-Bullseye
+
+sudo apt --fix-broken install
+
+sudo apt-get install python2 python-dev-is-python2 -y
+
+pi@raspberrypi:~ $ sudo python2 get-pip.py
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting pip<21.0
+  Downloading pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 2.3 MB/s 
+
+
+sudo apt-get install libssl-dev libcurl4-openssl-dev libjpeg-dev zlib1g-dev -y
+
+
+
+sudo pip2 install motioneye
+
+create motioneye directory
+sudo mkdir -p /etc/motioneye
+
+sudo cp /usr/local/share/motioneye/extra/motioneye.conf.sample /etc/motioneye/motioneye.conf
+
+prepare a media directory
+sudo mkdir -p /var/lib/motioneye
+
+check to see if you can start motioneye
+
+sudo /usr/local/share/motioneye/extra/motioneye.init-debian start
+
+Cannot get image out of camera, switching back to buster 
+
