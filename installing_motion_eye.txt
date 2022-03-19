@@ -1,0 +1,15 @@
+March 19, 2022 
+
+When installing Buster 2021-03-04-raspios-buster-armhf.img
+
+Placed in my raspberry pi 3, it prompted for updates, it tried to get the updates, but then it found that it could not install updates. It popped up a Window saying:
+
+ "Repository 'http://raspbian.raspberrypi.org/raspbian buster InRelease' changed its 'Suite' value from 'stable' to 'oldstable'."
+
+
+Opened another terminal window and ran:
+
+sudo apt-get update --allow-releaseinfo-change
+
+Went back to the "Updates" window and pressed "OK" , > "Back" to try the update again.
+It was successful in updating now.
